@@ -22,6 +22,10 @@ interface data {
 }
 const Main = ({ productData }: data) => {
   const [showAside, setShowAside] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
+  const toggleMobileFilter = () => {
+    setShowFilter(!showFilter);
+  };
   const toggleAsideVisibility = () => {
     setShowAside(!showAside);
   };
@@ -51,7 +55,36 @@ const Main = ({ productData }: data) => {
               </p>
             </div>
           </div>
-          <p className="text-sm font-bold md:hidden block text-black">FILTER</p>
+          <p
+            onClick={toggleMobileFilter}
+            className="text-sm font-bold md:hidden block text-black"
+          >
+            FILTER
+          </p>
+          <div
+            className={`block border-2 border-gray-200 py-3 rounded-t-2xl no-scrollbar z-50 sm:hidden fixed w-screen overflow-scroll bottom-0 left-0 px-3 bg-white transition-[height] ease-in-out duration-500 ${
+              showFilter ? "h-[65vh]" : "h-0"
+            }`}
+          >
+            <button
+              className="px-5 mb-3 py-2 bg-gray-200 text-black rounded-md"
+              onClick={toggleMobileFilter}
+            >
+              CLOSE
+            </button>
+            <div className="flex gap-3 py-8">
+              <input
+                type="checkbox"
+                name="customize"
+                id="customize"
+                className=""
+              />
+              <label className="text-[#252020] font-bold" htmlFor="customize">
+                CUSTOMIZABLE
+              </label>
+            </div>
+            <Aside />
+          </div>
           <p className="text-black md:hidden">|</p>
           <FilterDropdown />
         </div>
