@@ -62,8 +62,8 @@ const Main = ({ productData }: data) => {
             FILTER
           </p>
           <div
-            className={`block border-2 border-gray-200 rounded-t-2xl no-scrollbar z-50 sm:hidden fixed w-screen overflow-scroll bottom-0 left-0 px-3 bg-white transition-[height] ease-in-out duration-500 ${
-              showFilter ? "h-[80vh]" : "h-0"
+            className={`block no-scrollbar z-50 sm:hidden fixed w-screen overflow-scroll bottom-0 left-0 px-3 bg-white transition-[height] ease-in-out duration-500 ${
+              showFilter ? "h-[80vh] border-t-2 border-gray-200 rounded-t-2xl" : "h-0"
             }`}
           >
             <button
