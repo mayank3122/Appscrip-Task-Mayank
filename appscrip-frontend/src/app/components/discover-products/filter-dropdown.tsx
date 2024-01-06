@@ -20,7 +20,7 @@ const FilterDropdown = () => {
         tabIndex={0}
         className="flex gap-2 items-center"
       >
-        <p className="text-[#252020] font-bold text-lg">
+        <p className="text-[#252020] font-bold md:text-lg text-sm">
           {selectedItem || "RECOMMENDED"}
         </p>
         <Image
@@ -33,7 +33,7 @@ const FilterDropdown = () => {
       </div>
 
       <ul
-        className={`right-0 absolute flex flex-col gap-8 bg-[#FFFFFF] shadow-md py-8 pl-16 pr-12 rounded border ${
+        className={`right-0 absolute flex flex-col gap-8 bg-[#FFFFFF] shadow-md py-8 md:pl-16 pl-10 md:pr-12 pr-8 rounded border ${
           showList ? "visible" : "invisible"
         }`}
       >
@@ -47,7 +47,7 @@ const FilterDropdown = () => {
                   setSelectedItem(ele);
                   console.log("Selected Item:", ele);
                 }}
-                className={`text-[#252020] cursor-pointer flex items-center gap-3 text-lg ${
+                className={`text-[#252020] cursor-pointer flex items-center gap-3 md:text-lg text-sm ${
                   selectedItem === ele ? "font-bold" : "font-normal"
                 } whitespace-nowrap`}
               >

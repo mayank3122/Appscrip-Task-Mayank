@@ -29,7 +29,7 @@ const ProductCard = ({ ele }: data) => {
           width={400}
           height={300}
           alt="product image"
-          className="object-contain shadow-md border-[#F3F4F6] h-96"
+          className="object-contain shadow-md border-[#F3F4F6] md:w-56 md:h-80 h-56  lg:w-[400px] lg:h-96"
         />
         <div className="flex flex-col gap-2">
           <p className="text-[#252020] font-bold h-12 no-scrollbar overflow-y-auto">

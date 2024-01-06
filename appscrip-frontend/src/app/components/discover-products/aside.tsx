@@ -1,12 +1,12 @@
 import React from "react";
-import Ideal from "../accordions/ideal";
-import Ocassion from "../accordions/ocassion";
-import Work from "../accordions/work";
-import Fabric from "../accordions/fabric";
-import Segment from "../accordions/segment";
-import SuitableFor from "../accordions/suitable-for";
-import RawMaterial from "../accordions/raw-materials";
-import Patterns from "../accordions/patterns";
+import Ideal from "../accordions/filter-accordions/ideal";
+import Ocassion from "../accordions/filter-accordions/ocassion";
+import Work from "../accordions/filter-accordions/work";
+import Fabric from "../accordions/filter-accordions/fabric";
+import Segment from "../accordions/filter-accordions/segment";
+import SuitableFor from "../accordions/filter-accordions/suitable-for";
+import RawMaterial from "../accordions/filter-accordions/raw-materials";
+import Patterns from "../accordions/filter-accordions/patterns";
 
 const Aside = () => {
   return (

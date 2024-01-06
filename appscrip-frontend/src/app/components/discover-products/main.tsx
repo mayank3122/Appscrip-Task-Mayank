@@ -27,9 +27,9 @@ const Main = ({ productData }: data) => {
   };
   return (
     <>
-      <div className="px-24">
-        <div className="flex justify-between py-6 border-b border-t border-[#E5E5E5]">
-          <div className="flex gap-20">
+      <div className="lg:px-8 px-4">
+        <div className="flex md:justify-between justify-around py-6 border-b border-t border-[#E5E5E5]">
+          <div className="md:flex hidden gap-20">
             <p className="text-lg font-bold text-[#252020]">{`${productData.length} ITEMS`}</p>
             <div
               onClick={toggleAsideVisibility}
@@ -51,13 +51,17 @@ const Main = ({ productData }: data) => {
               </p>
             </div>
           </div>
+          <p className="text-sm font-bold md:hidden block text-black">FILTER</p>
+          <p className="text-black md:hidden">|</p>
           <FilterDropdown />
         </div>
 
         <div className={`flex ${showAside ? "gap-12" : "gap-0"}`}>
           <div
-            className={`transition-all ${
-              showAside ? " translate-x-5 duration-1000 w-1/3" : "opacity-0 w-0"
+            className={`md:block hidden transition-all ${
+              showAside
+                ? " translate-x-5 duration-1000 w-full xl:w-1/2"
+                : "opacity-0 w-0"
             } overflow-hidden`}
           >
             {showAside && (
@@ -81,11 +85,11 @@ const Main = ({ productData }: data) => {
             )}
           </div>
           <div
-            className={`mt-8 grid md:grid-cols-4 ${
+            className={`mt-8 grid grid-cols-2 ${
               showAside ? "lg:grid-cols-3" : "lg:grid-cols-4"
             } 2xl:grid-cols-${
               showAside ? "lg:grid-cols-3" : "lg:grid-cols-4"
-            } gap-10`}
+            } gap-8`}
           >
             {productData.map((ele, i) => {
               return <ProductCard key={i} ele={ele} />;
